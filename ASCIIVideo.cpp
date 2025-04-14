@@ -11,6 +11,8 @@
 using namespace cv;
 
 std::string ASCII_Chars = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/()1{}[]?-_+~<>i!lI;:,. ";
+//"@$%#&!*+=-_,. ";
+//"$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/()1{}[]?-_+~<>i!lI;:,. ";
 
 std::string img_path = "Budapest.jpeg";
 
@@ -116,7 +118,7 @@ int main()
         Mat image = imread(img_path);
 
         Mat resized;
-        resize(frame, resized, Size(640, 360)); //640 x 360
+        resize(image, resized, Size(640, 360)); //640 x 360
 
         ConvertMatString(resized, outbuffer);
 
