@@ -44,7 +44,7 @@ void ConvertMatString(Mat img, std::string& buf){
 
             int pixel = (int)gry.at<uchar>(i, j);
 
-            int char_idx = std::clamp((int)(pixel / ASCII_Chars.size()), 0, (int)ASCII_Chars.size());
+            int char_idx = (int)(pixel / 255) * ASCII_CHARS.size();
             buf += ASCII_Chars[char_idx];
 
         }
